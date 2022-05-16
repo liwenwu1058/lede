@@ -48,7 +48,7 @@
 
 		local cpu_info = luci.sys.exec("cpuinfo")
 
-		local eth_info = luci.sys.exec("ethinfo")
+		local eth_info = luci.sys.exec("ethinfo 2>/dev/null")
 
 		local user_info = luci.sys.exec("cat /proc/net/arp | grep '0x2' | wc -l") or 0
 		
