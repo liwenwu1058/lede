@@ -58,7 +58,7 @@
 
 		local cpu_usage = luci.sys.exec("top -n1 | awk '/^CPU/ { printf(\"%d%%\", 100 - $8) }'") or "6%"
 		local cpu_info = luci.sys.exec("/sbin/cpuinfo") or "ARM Processor x 0 (233MHz, 2.3°C)"
-		local eth_info = luci.sys.exec("ethinfo")
+		local eth_info = luci.sys.exec("ethinfo 2>/dev/null")
 
 		local rv = {
 			cpuinfo    = cpu_info,
