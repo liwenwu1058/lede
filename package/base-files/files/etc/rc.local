@@ -2,9 +2,6 @@
 # the system init finished. By default this file does nothing.
 iwconfig wlan0 txpower 23
 iwconfig wlan1 txpower 23
-if [[ `grep -c "coremark" /etc/crontabs/root` -eq 1 ]]; then
-  sed -i /coremark/d /etc/crontabs/root
-fi
-/etc/init.d/network restart
-/etc/init.d/uhttpd restart
+uci set firewall.@rule["$(uci show firewall | grep 'Allow-ICMPv6-Forward' | cut -d'[' -f2 | cut -d']' -f1)"].enabled='0'
+uci commit firewall
 exit 0
