@@ -193,6 +193,7 @@ endif
 
 	chmod 0600 $(1)/etc/shadow
 	chmod 1777 $(1)/tmp
+	chmod 0755 /etc/init.d/nat6
 
 	$(call ImageConfigOptions,$(1))
 	$(call Package/base-files/install-target,$(1))
