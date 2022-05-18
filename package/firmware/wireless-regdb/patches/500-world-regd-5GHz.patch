@@ -14,6 +14,3 @@ Signed-off-by: Felix Fietkau <nbd@nbd.name>
  	# Channel 52 - 64
  	(5260 - 5320 @ 80), (20), NO-IR, DFS, AUTO-BW
  	# Channel 100 - 144
-        (5500 - 5720 @ 80), (20), NO-IR, DFS, AUTO-BW
-        # Channel 149 - 165
-        (5745 - 5825 @ 80), (20), NO-IR, DFS, AUTO-BW
