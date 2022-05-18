@@ -42,7 +42,7 @@ proto_vxlan_setup_peer() {
 	}
 
 	bridge fdb append \
-		${lladdr:-00:00:00:00:00:00} 2>/dev/null \
+		${lladdr:-00:00:00:00:00:00} \
 		dev ${cfg}                   \
 		dst ${dst}                   \
 		${src_vni:+src_vni $src_vni} \
